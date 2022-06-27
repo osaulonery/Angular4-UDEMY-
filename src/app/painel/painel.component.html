@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="jumbotron my-4">
+    <div class="row">
+      <div class="col-sm-6">
+        <app-progresso [progresso]="progresso"></app-progresso>
+      </div>
+      <div class="col-sm-6">
+        <div class="conteudoTentativas d-flex justify-content-end">
+          <app-tentativas [tentativas]="tentativas"></app-tentativas>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col">
+        <h5>
+          <b>{{ instrucao }}</b>
+        </h5>
+        <p><b>Frase: </b>{{ rodadaFrase.fraseEng }}</p>
+        <div class="form-group mt-3">
+          <textarea
+            name=""
+            id=""
+            rows="5"
+            class="form-control"
+            placeholder="Traduza"
+            (input)="atualizaResposta($event)"
+            [value]="resposta"
+          ></textarea>
+        </div>
+        <div class="form-group d-flex justify-content-end">
+          <button
+            type="button"
+            class="btn btn-outline-info"
+            (click)="verificarResposta()"
+          >
+            Verificar minha frase
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row"></div>
+  </div>
+</div>

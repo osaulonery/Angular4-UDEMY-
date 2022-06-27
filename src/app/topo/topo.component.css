@@ -1,0 +1,12 @@
+.navbar {
+  background: #1cb0f6;
+}
+
+.navbar-brand {
+  margin-left: 20px;
+}
+
+a {
+  text-transform: uppercase;
+  font-size: 30px;
+}
